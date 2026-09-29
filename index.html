@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorevio Automation | Asistentes Virtuales IA & Flujos con n8n</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Outfit (Titulares) + Plus Jakarta Sans (Texto de Lectura) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        matrix: {
+                            dark: '#0D1117',
+                            card: '#161B22',
+                            border: '#21262D',
+                            green: '#00FF66',     // Verde Terminal Clásico
+                            copper: '#FF9900',    // Cobre Cálido para CTAs
+                            copperHover: '#E68A00',
+                            text: '#E6EDF3',
+                            muted: '#8B949E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-matrix-dark text-matrix-text font-sans antialiased selection:bg-matrix-green selection:text-matrix-dark pb-16 md:pb-0">
+
+    <!-- Navbar Corregida para Móviles -->
+    <header class="fixed w-full bg-matrix-dark/95 backdrop-blur-md z-50 border-b border-matrix-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center gap-2">
+            <!-- Logo Adaptable -->
+            <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+                <div class="w-8 h-8 sm:w-9 sm:h-9 shrink-0 rounded-xl bg-matrix-card border border-matrix-green/40 flex items-center justify-center font-display font-extrabold text-matrix-green text-base sm:text-lg shadow-sm">
+                    D
+                </div>
+                <span class="text-base sm:text-xl font-extrabold tracking-tight text-white font-display truncate">
+                    DOREVIO<span class="text-matrix-green">.auto</span>
+                </span>
+            </div>
+
+            <!-- Menú Navegación PC -->
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-matrix-muted">
+                <a href="#beneficios" class="hover:text-matrix-green transition">Beneficios</a>
+                <a href="#servicios" class="hover:text-matrix-green transition">Servicios</a>
+                <a href="#casos" class="hover:text-matrix-green transition">Caso Real</a>
+            </nav>
+
+            <!-- Botón WhatsApp Adaptable -->
+            <a href="https://wa.me/18299596382?text=Hola,%20vi%20su%20web%20y%20quisiera%20cotizar%20un%20agente%20de%20IA%20para%20mi%20negocio" 
+               target="_blank"
+               class="bg-matrix-copper hover:bg-matrix-copperHover text-matrix-dark font-bold px-3 py-2 sm:px-5 sm:py-2.5 rounded-xl text-xs sm:text-sm transition shadow-lg shadow-matrix-copper/20 flex items-center gap-1.5 sm:gap-2 font-display shrink-0">
+                <i class="fa-brands fa-whatsapp text-base sm:text-lg"></i> 
+                <span class="hidden sm:inline">Hablar por WhatsApp</span>
+                <span class="sm:hidden font-extrabold">WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 sm:pt-36 pb-16 px-4 sm:px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div>
+            <span class="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-matrix-card text-matrix-green text-[11px] sm:text-xs font-semibold mb-5 border border-matrix-green/30">
+                <span class="w-2 h-2 rounded-full bg-matrix-green animate-pulse"></span>
+                Mantén tu negocio activo 24/7
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-5 font-display">
+                Tu negocio vendiendo, <span class="text-matrix-green underline decoration-matrix-green/40 underline-offset-8">incluso cuando tú no estás.</span>
+            </h1>
+            <p class="text-matrix-muted text-base sm:text-lg mb-8 leading-relaxed font-normal">
+                Eliminamos el trabajo manual en tu empresa. Desarrollamos <strong class="text-white">Asistentes Virtuales de IA para WhatsApp</strong> y flujos automatizados con <strong class="text-white">n8n</strong> para atender clientes, agendar citas y registrar prospectos o ventas en tus tablas de Excel en tiempo real.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3.5">
+                <a href="https://wa.me/18299596382?text=Hola,%20me%20gustaría%20solicitar%20una%20demo%20personalizada%20para%20mi%20empresa" 
+                   target="_blank"
+                   class="bg-matrix-copper hover:bg-matrix-copperHover text-matrix-dark font-extrabold px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl text-center transition shadow-xl shadow-matrix-copper/25 flex items-center justify-center gap-2 text-sm sm:text-base font-display">
+                    <i class="fa-solid fa-bolt"></i> Solicitar Demo Personalizada
+                </a>
+                <a href="#servicios" class="border-2 border-matrix-green text-matrix-green hover:bg-matrix-green hover:text-matrix-dark font-extrabold px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl text-center transition font-display text-sm sm:text-base shadow-lg shadow-matrix-green/10">
+                    Conoce todo lo que hace
+                </a>
+            </div>
+        </div>
+
+        <!-- Visualización de Chat / Demostración -->
+        <div class="bg-matrix-card p-5 sm:p-6 rounded-2xl border border-matrix-border shadow-2xl relative">
+            <div class="flex items-center justify-between pb-3.5 mb-3.5 border-b border-matrix-border text-xs text-matrix-muted">
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                </div>
+                <span class="font-medium">Demostración en Tiempo Real</span>
+            </div>
+
+            <!-- Chat Simulado -->
+            <div class="space-y-3 text-xs leading-relaxed">
+                <div class="bg-matrix-dark p-3.5 rounded-xl border border-matrix-border text-slate-300">
+                    <span class="text-matrix-copper font-bold block mb-0.5">Cliente (2:15 AM):</span>
+                    "¿Tienen disponibilidad de citas para mañana y trabajan con Primera ARS?"
+                </div>
+                <div class="bg-matrix-dark p-3.5 rounded-xl border border-matrix-green/40 text-matrix-green">
+                    <span class="text-white font-bold block mb-0.5">Dorevio AI Agent (2:15 AM):</span>
+                    "¡Hola! Sí, aceptamos Primera ARS. Mañana tenemos turnos libres a las 9:00 AM y 3:30 PM. ¿A cuál prefieres agendarte?"
+                </div>
+            </div>
+
+            <div class="mt-5 pt-3.5 border-t border-matrix-border flex justify-between items-center text-[11px] sm:text-xs text-matrix-muted">
+                <span>Respuesta: <strong class="text-matrix-green font-semibold">1.1 segs</strong></span>
+                <span class="text-matrix-copper font-bold">✓ Cita registrada</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloque de Beneficios Claros -->
+    <section id="beneficios" class="py-14 sm:py-16 bg-matrix-card/50 border-y border-matrix-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 font-display">¿Qué obtienes al trabajar con Dorevio?</h2>
+                <p class="text-matrix-muted text-sm sm:text-base">Resultados medibles desde la primera semana de implementación.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <div class="bg-matrix-dark p-5 sm:p-6 rounded-2xl border border-matrix-border text-center">
+                    <div class="text-3xl font-extrabold text-matrix-green mb-2 font-display">24/7</div>
+                    <h3 class="font-bold text-white mb-1 text-sm sm:text-base">Atención Continua</h3>
+                    <p class="text-matrix-muted text-xs">Respuestas inmediatas fuera de horario comercial y domingos.</p>
+                </div>
+                <div class="bg-matrix-dark p-5 sm:p-6 rounded-2xl border border-matrix-border text-center">
+                    <div class="text-3xl font-extrabold text-matrix-copper mb-2 font-display">0%</div>
+                    <h3 class="font-bold text-white mb-1 text-sm sm:text-base">Mensajes Perdidos</h3>
+                    <p class="text-matrix-muted text-xs">Captura automática de prospectos interesados en tu servicio.</p>
+                </div>
+                <div class="bg-matrix-dark p-5 sm:p-6 rounded-2xl border border-matrix-border text-center">
+                    <div class="text-3xl font-extrabold text-matrix-green mb-2 font-display">-70%</div>
+                    <h3 class="font-bold text-white mb-1 text-sm sm:text-base">Carga Repetitiva</h3>
+                    <p class="text-matrix-muted text-xs">Mientras tu equipo se enfoca en cerrar ventas, Dorevio responde las preguntas frecuentes automáticamente.</p>
+                </div>
+                <div class="bg-matrix-dark p-5 sm:p-6 rounded-2xl border border-matrix-border text-center">
+                    <div class="text-3xl font-extrabold text-matrix-copper mb-2 font-display">$0</div>
+                    <h3 class="font-bold text-white mb-1 text-sm sm:text-base">Sin Suscripciones</h3>
+                    <p class="text-matrix-muted text-xs">Desarrollo sobre infraestructura propia en n8n y Python. No pagas licencias mensuales por usuario a otras plataformas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-3 sm:mb-4 font-display">Servicios de Automatización</h2>
+            <p class="text-matrix-muted text-sm sm:text-base">Soluciones técnicas empaquetadas para ser instaladas rápidamente en tu negocio.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+            <!-- Servicio 1 -->
+            <div class="bg-matrix-card p-6 sm:p-8 rounded-2xl border border-matrix-border hover:border-matrix-green/50 transition group">
+                <div class="w-12 h-12 bg-matrix-dark border border-matrix-green/30 text-matrix-green rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3 font-display">Asistente IA para WhatsApp</h3>
+                <p class="text-matrix-muted text-sm leading-relaxed mb-4">
+                    Agentes entrenados con los precios, catálogos y políticas de tu empresa. Responden dudas complejas y recopilan datos de clientes automáticamente.
+                </p>
+                <span class="text-xs font-semibold text-matrix-green">✓ Ideal para: Clínicas, Tiendas, Servicios</span>
+            </div>
+
+            <!-- Servicio 2 -->
+            <div class="bg-matrix-card p-6 sm:p-8 rounded-2xl border border-matrix-border hover:border-matrix-copper/50 transition group">
+                <div class="w-12 h-12 bg-matrix-dark border border-matrix-copper/30 text-matrix-copper rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-diagram-next"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3 font-display">Integración de Sistemas (n8n)</h3>
+                <p class="text-matrix-muted text-sm leading-relaxed mb-4">
+                    Conectamos tu correo, CRM, Google Sheets y WhatsApp para que los datos viajen solos sin necesidad de que nadie los digite manualmente.
+                </p>
+                <span class="text-xs font-semibold text-matrix-copper">✓ Ideal para: Pymes y Equipos de Ventas</span>
+            </div>
+
+            <!-- Servicio 3 -->
+            <div class="bg-matrix-card p-6 sm:p-8 rounded-2xl border border-matrix-border hover:border-matrix-green/50 transition group">
+                <div class="w-12 h-12 bg-matrix-dark border border-matrix-green/30 text-matrix-green rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-file-excel"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3 font-display">Procesamiento de Excel & Reportes</h3>
+                <p class="text-matrix-muted text-sm leading-relaxed mb-4">
+                    Cargas tus archivos masivos de ventas o facturas y el bot los limpia, consolida y genera reportes ejecutivos o resúmenes gráficos listos para tu correo o WhatsApp.
+                </p>
+                <span class="text-xs font-semibold text-matrix-green">✓ Ideal para: Contabilidad y Operaciones</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Caso de Éxito -->
+    <section id="casos" class="py-14 sm:py-16 bg-matrix-card/30 border-t border-matrix-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="bg-matrix-card border border-matrix-border rounded-3xl p-6 sm:p-12 relative overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="text-matrix-green font-bold text-xs tracking-widest uppercase mb-2 block font-display">CASO DE ESTUDIO REAL</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4 font-display">Clínica Dental Sonrisas del Caribe</h2>
+                        <p class="text-matrix-muted text-sm mb-6 leading-relaxed">
+                            Implementación de un Agente conversacional con IA en n8n que atiende pacientes fuera de horario laboral, confirma coberturas de seguro medico (ARS) y pre-agenda citas automáticamente.
+                        </p>
+                        <div class="space-y-2 text-xs text-slate-300 mb-6">
+                            <div class="flex items-center gap-2"><span class="text-matrix-green font-bold">✓</span> Reducción de tiempo de respuesta a 0 segundos.</div>
+                            <div class="flex items-center gap-2"><span class="text-matrix-green font-bold">✓</span> Integración limpia vía Webhooks privados.</div>
+                        </div>
+                    </div>
+                    <div class="bg-matrix-dark p-6 rounded-2xl border border-matrix-border text-center">
+                        <div class="text-4xl font-extrabold text-matrix-green mb-1 font-display">100%</div>
+                        <div class="text-white text-sm mb-3 font-bold">Atención Automatizada</div>
+                        <p class="text-matrix-muted text-xs">Cero costo de licenciamiento recurrente por usuarios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer class="bg-matrix-dark border-t border-matrix-border py-10 sm:py-12 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+            <div>
+                <span class="text-lg font-bold text-white font-display">DOREVIO AUTOMATION</span>
+                <p class="text-matrix-muted text-xs mt-1">Santo Domingo, República Dominicana | dorevio.com</p>
+            </div>
+            <a href="https://wa.me/18299596382?text=Hola,%20quisiera%20iniciar%20una%20consulta%20para%20automatizar%20mi%20negocio" 
+               target="_blank"
+               class="bg-matrix-copper hover:bg-matrix-copperHover text-matrix-dark font-extrabold px-6 py-3 rounded-xl text-sm transition shadow-lg flex items-center gap-2 font-display">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Iniciar Consulta por WhatsApp
+            </a>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante Fijo para WhatsApp en Móviles (Bottom-Right) -->
+    <a href="https://wa.me/18299596382?text=Hola,%20quisiera%20consultar%20sobre%20sus%20servicios%20de%20automatización" 
+       target="_blank" 
+       class="fixed bottom-5 right-5 z-50 bg border border-emerald-400/30 bg-emerald-500 hover:bg-emerald-400 text-matrix-dark w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl shadow-emerald-500/50 transition transform active:scale-95"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp text-white"></i>
+    </a>
+
+</body>
+</html>
