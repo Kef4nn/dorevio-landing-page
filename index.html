@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dorevio Automation | Asistentes Virtuales IA & Flujos con n8n</title>
-    <!-- Favicon desde GitHub -->
-    <link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/Kef4nn/dorevio-landing-page/main/Logo%20Dorevio.jpg">
+    <meta name="description" content="Asistentes virtuales con IA para WhatsApp que responden a tus clientes al instante, 24/7, y agendan citas. Santo Domingo, República Dominicana.">
+    <!-- Vista previa al compartir el enlace (WhatsApp, Instagram, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://automation.dorevio.com/">
+    <meta property="og:title" content="Dorevio Automation | Asistentes de IA para WhatsApp">
+    <meta property="og:description" content="Tu negocio respondiendo clientes al instante, 24/7, incluso cuando tú no estás.">
+    <meta property="og:image" content="https://automation.dorevio.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_DO">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/webp" href="logo.webp">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -40,14 +50,14 @@
 </head>
 <body class="bg-matrix-dark text-matrix-text font-sans antialiased selection:bg-matrix-green selection:text-matrix-dark pb-16 md:pb-0">
 
-    <!-- Navbar con Logo desde URL Raw de GitHub -->
+    <!-- Navbar -->
     <header class="fixed w-full bg-matrix-dark/95 backdrop-blur-md z-50 border-b border-matrix-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center gap-2">
-            <!-- Logo con Imagen Raw de GitHub -->
+            <!-- Logo optimizado (el JPG original se mantiene porque lo usa el flujo SMM de n8n) -->
             <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
                 <div class="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-matrix-card border border-matrix-green/80 flex items-center justify-center shadow-[0_0_15px_rgba(0,255,102,0.35)] overflow-hidden">
-                    <img src="https://raw.githubusercontent.com/Kef4nn/dorevio-landing-page/main/Logo%20Dorevio.jpg" 
-                         alt="Dorevio Logo" 
+                    <img src="logo.webp" width="40" height="40"
+                         alt="Dorevio Logo"
                          class="w-full h-full object-cover">
                 </div>
                 <span class="text-base sm:text-xl font-extrabold tracking-tight text-white font-display truncate">
@@ -59,7 +69,7 @@
             <nav class="hidden md:flex gap-8 text-sm font-medium text-matrix-muted">
                 <a href="#beneficios" class="hover:text-matrix-green transition">Beneficios</a>
                 <a href="#servicios" class="hover:text-matrix-green transition">Servicios</a>
-                <a href="#casos" class="hover:text-matrix-green transition">Caso Real</a>
+                <a href="#casos" class="hover:text-matrix-green transition">Demo</a>
             </nav>
 
             <!-- Botón WhatsApp con Nuevo Número -->
@@ -207,26 +217,32 @@
         </div>
     </section>
 
-    <!-- Caso de Éxito -->
+    <!-- Demo por sector -->
     <section id="casos" class="py-14 sm:py-16 bg-matrix-card/30 border-t border-matrix-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="bg-matrix-card border border-matrix-border rounded-3xl p-6 sm:p-12 relative overflow-hidden">
                 <div class="grid md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <span class="text-matrix-green font-bold text-xs tracking-widest uppercase mb-2 block font-display">CASO DE ESTUDIO REAL</span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4 font-display">Clínica Dental Sonrisas del Caribe</h2>
+                        <span class="text-matrix-green font-bold text-xs tracking-widest uppercase mb-2 block font-display">DEMO · CLÍNICAS Y CONSULTORIOS</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4 font-display">Así atendería tu clínica a las 2 de la mañana</h2>
                         <p class="text-matrix-muted text-sm mb-6 leading-relaxed">
-                            Implementación de un Agente conversacional con IA en n8n que atiende pacientes fuera de horario laboral, confirma coberturas de seguro medico (ARS) y pre-agenda citas automáticamente.
+                            Un asistente de IA en WhatsApp que responde a tus pacientes fuera de horario, confirma qué seguros médicos (ARS) aceptas y pre-agenda citas. Cuando alguien está listo para reservar o tiene un caso especial, te avisa para que lo atiendas tú.
                         </p>
                         <div class="space-y-2 text-xs text-slate-300 mb-6">
-                            <div class="flex items-center gap-2"><span class="text-matrix-green font-bold">✓</span> Reducción de tiempo de respuesta a 0 segundos.</div>
-                            <div class="flex items-center gap-2"><span class="text-matrix-green font-bold">✓</span> Integración limpia vía Webhooks privados.</div>
+                            <div class="flex items-center gap-2"><span class="text-matrix-green font-bold">✓</span> Responde en segundos, de día, de noche y en fines de semana.</div>
+                            <div class="flex items-center gap-2"><span class="text-matrix-green font-bold">✓</span> Guarda cada contacto y conversación para que no se pierda ningún paciente.</div>
+                            <div class="flex items-center gap-2"><span class="text-matrix-green font-bold">✓</span> Te pasa la conversación cuando hace falta una persona.</div>
                         </div>
                     </div>
                     <div class="bg-matrix-dark p-6 rounded-2xl border border-matrix-border text-center">
-                        <div class="text-4xl font-extrabold text-matrix-green mb-1 font-display">100%</div>
-                        <div class="text-white text-sm mb-3 font-bold">Atención Automatizada</div>
-                        <p class="text-matrix-muted text-xs">Cero costo de licenciamiento recurrente por usuarios.</p>
+                        <div class="text-4xl font-extrabold text-matrix-green mb-1 font-display">Pruébalo</div>
+                        <div class="text-white text-sm mb-3 font-bold">Escríbele a nuestro asistente ahora</div>
+                        <p class="text-matrix-muted text-xs mb-5">Es el mismo tipo de asistente que instalamos en tu negocio. Escríbele como si fueras un cliente.</p>
+                        <a href="https://wa.me/18097775524?text=Hola,%20quiero%20probar%20la%20demo"
+                           target="_blank"
+                           class="inline-flex items-center gap-2 bg-matrix-copper hover:bg-matrix-copperHover text-matrix-dark font-extrabold px-5 py-3 rounded-xl text-sm transition font-display">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Probar la demo
+                        </a>
                     </div>
                 </div>
             </div>
